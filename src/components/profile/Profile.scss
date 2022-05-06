@@ -1,0 +1,46 @@
+.mb-profile {
+	.pro-left,
+	.pro-right {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.left-wrapper {
+        text-align: center;
+		.profile-name {
+			display: inline-block;
+			margin: O auto;
+			padding: 5px 1rem;
+			color: white;
+			background: var(--lc);
+            font-size: 1.5rem;
+            border-radius: 5px;
+            margin-top: 10px;
+		}
+	}
+
+	.img-wrapper {
+		width: 200px;
+		height: 200px;
+		border-radius: 50%;
+		border: 1px solid var(--c);
+		background: var(--lc);
+		overflow: hidden;
+
+		img {
+			width: auto;
+			height: 100%;
+			position: absolute;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+	}
+
+	.pro-file,
+	.pro-pwd {
+		display: inline-block;
+		width: 70%;
+		margin-right: 10px;
+	}
+}

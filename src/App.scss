@@ -1,0 +1,116 @@
+@font-face {
+	font-family: "rb";
+	src: local("rb"), url("./fonts/Roboto-Bold.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "rw";
+	src: local("rw"), url("./fonts/Raleway-Regular.ttf") format("truetype");
+}
+
+:root {
+	--pf: "rb";
+	--rw: "rw";
+
+	//rgb(31,41,55);
+	--d-bg: #222831;
+	--n-bg: #393e46;
+
+	--dc: #35477d;
+	--c: #6c5b7b;
+	--lc: #c06c84;
+	--spe: #f67280;
+
+	font-size: 14px;
+	color: white;
+}
+
+body {
+	font-family: "rw";
+	background: var(--d-bg) !important;
+	color: white;
+}
+
+#app {
+	padding: 43px 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	font-family: "rb";
+	color: white;
+}
+
+h5 {
+	font-family: "rw";
+}
+
+.bg-d {
+	background: var(--d-bg);
+}
+
+.bg-n {
+	background: var(--n-bg);
+}
+
+.bg-dc {
+	background: var(--dc);
+}
+
+.bg-c {
+	background: var(--c);
+}
+
+.bg-lc {
+	background: var(--lc);
+}
+
+.bg-spe {
+	background: var(--spe);
+}
+
+.mb-container {
+	padding: 5rem 0;
+}
+
+.mb-btn {
+	background-color: var(--lc);
+	color: white;
+    transition: .3s ease;
+
+	&:hover {
+        background: var(--spe);
+        transition: .3s ease;
+        color: white;
+	}
+}
+
+.mb-btn-full {
+    width: 100%;
+}
+
+.btn-disabled {
+    position: relative;
+
+    .icon-wrapper {
+        position: absolute;
+        top: 50%;
+        left: 1rem;
+        transform: translateY(-50%);
+    }
+}
+
+.icon-wrapper {
+	width: 1.5rem;
+	margin-right: 1rem;
+}
+
+.img-wrapper {
+    position: relative;
+
+    img{
+        width: 100%;
+    }
+}

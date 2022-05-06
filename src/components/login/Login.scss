@@ -1,0 +1,32 @@
+.mb-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 42px);
+
+    .login-wrapper {
+        padding: 5rem 2rem;
+        border-radius: 5px;
+        background: var(--n-bg);
+        width: 450px;
+
+        h2 {
+            margin-bottom: 2rem;
+        }
+
+        .log-email {
+            margin-bottom: 5px;
+
+            input {
+                border-radius: 5px 5px 0 0 ;
+            }
+        }
+
+        .log-pwd {
+
+            input {
+                border-radius: 0 0 5px 5px;
+            }
+        }
+    }
+}

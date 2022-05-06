@@ -1,0 +1,71 @@
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/utilities";
+
+.nav-right {
+	position: relative;
+    display: flex;
+    align-items: center;
+
+	.nav-user-wrapper {
+		box-shadow: $box-shadow-lg;
+		width: 30px;
+		height: 30px;
+		overflow: hidden;
+		border-radius: 50%;
+		border: 1px solid var(--n-bg);
+        margin-left: 1rem;
+
+		img {
+			width: 100%;
+		}
+
+        &.active {
+            border-color: var(--spe);
+        }
+	}
+	.nav-user-content {
+		position: absolute;
+		top: 50px;
+		right: 0;
+		background: var(--n-bg);
+        border-radius: 5px;
+        overflow: hidden;
+
+		ul {
+			margin: 0;
+			padding: 0;
+			// border-radius: 5px;
+			// overflow: hidden;
+
+			li {
+				color: white;
+				list-style: none;
+
+				.nav-link {
+					display: flex;
+					align-items: center;
+					width: 200px;
+					color: white;
+					transition: 0.3s ease;
+                    overflow: hidden;
+
+					.icon-wrapper {
+						width: 1.5rem;
+						margin-right: 1rem;
+					}
+
+					&:hover {
+						background: var(--spe);
+						transition: 0.3s ease;
+					}
+
+				}
+
+				&:not(:last-child) .nav-link {
+					border-bottom: 1px solid var(--d-bg);
+				}
+			}
+		}
+	}
+}
