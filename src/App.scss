@@ -19,7 +19,28 @@
 	--dc: #35477d;
 	--c: #6c5b7b;
 	--lc: #c06c84;
-	--spe: #f67280;
+	//--spe: #f67280;
+
+	//--dark: #495464;
+	--dgray: #bbbfca;
+	--gray: #e8e8e8;
+	--lgray: #f4f4f2;
+
+	--dgreen: #99a799;
+	--green: #adc2a9;
+	--lgreen: #d3e4cd;
+
+	--skin: #fef5ed;
+
+	--ddark: #8e806a;
+	--dark: #c3b091;
+
+	--dcolor: #e9dac1;
+	--color: #f7ecde;
+	--lcolor: #fbf8f1;
+
+	//--spe: #54bab9;
+    --spe: #79B4B7;
 
 	font-size: 14px;
 	color: white;
@@ -27,8 +48,8 @@
 
 body {
 	font-family: "rw";
-	background: var(--d-bg) !important;
-	color: white;
+	background: var(--lcolor) !important;
+	color: var(--ddark);
 }
 
 #app {
@@ -76,30 +97,36 @@ h5 {
 }
 
 .mb-btn {
-	background-color: var(--lc);
+	background-color: var(--spe);
 	color: white;
-    transition: .3s ease;
+	transition: 0.3s ease;
 
 	&:hover {
-        background: var(--spe);
-        transition: .3s ease;
-        color: white;
+		background: var(--dcolor);
+		transition: 0.3s ease;
+		color: var(--ddark);
+	}
+
+	&:focus {
+		box-shadow: none;
 	}
 }
 
 .mb-btn-full {
-    width: 100%;
+	width: 100%;
 }
 
 .btn-disabled {
-    position: relative;
+	position: relative;
+    background: var(--gray);
+    color: white;
 
-    .icon-wrapper {
-        position: absolute;
-        top: 50%;
-        left: 1rem;
-        transform: translateY(-50%);
-    }
+	.icon-wrapper {
+		position: absolute;
+		top: 50%;
+		left: 1rem;
+		transform: translateY(-50%);
+	}
 }
 
 .icon-wrapper {
@@ -108,9 +135,50 @@ h5 {
 }
 
 .img-wrapper {
-    position: relative;
+	position: relative;
 
-    img{
-        width: 100%;
+	img {
+		height: 100%;
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+}
+
+.nav-link {
+	color: white;
+
+	&:hover {
+		color: var(--ddark);
+	}
+}
+
+.animation {
+  animation: fade-in 0.3s ease-in both;
+  opacity: 0;
+}
+
+@keyframes fade-in {
+  from {
+    opactiy: 0;
+  } to {
+    opacity: 1;
+  }
+}
+
+// RESET BOOTSTRAP ///////////
+.form-control {
+	background: var(--skin);
+	border: 1px solid var(--color);
+	color: var(--ddark);
+
+	&:focus {
+		box-shadow: none;
+        color: var(--ddark);
+		border-color: var(--lcolor);
+	}
+
+    &::placeholder {
+        color: var(--ddark);
     }
 }

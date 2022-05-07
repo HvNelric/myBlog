@@ -14,8 +14,6 @@ const Profile = () => {
     const info = useSelector(userInfo)
     const dispatch = useDispatch()
 
-    console.log('PROFILE info', info)
-
     const submitImg = e => {
         e.preventDefault()
 
@@ -78,37 +76,51 @@ const Profile = () => {
     }
 
     return (
-        <div className='container-fluid mb-profile'>
-            <div className="container mb-container">
-                <div className="row">
-                    <div className="col-12 col-md-4 pro-left">
-                       <div className='left-wrapper'>
-                            <div className="img-wrapper pro-img-wrapper shadow">
-                                <img src={info.img} alt={info.name} />
-                            </div>
-                            <div className="profile-name">
-                                {info.name}
-                            </div>
-                       </div>
-                    </div>
-                    <div className="col-12 col-md-8 pro-right">
-                        <div className='form-wrapper'>
-                            <form onSubmit={submitImg}>
-                                <div className="mb-4 pro-file">
-                                    <input type="file" className="form-control" id="email" aria-describedby="emailHelp" placeholder='Changer photo de profil'
-
-                                    />
+        <div className='container-fluid p-0 mb-profile'>
+            <div className='container-fuid p-0 profile-wrapper'>
+                <div className="container mb-container">
+                    <div className="row">
+                        <div className="col-12 col-md-4 pro-left">
+                           <div className='left-wrapper'>
+                                <div className="img-wrapper pro-img-wrapper shadow">
+                                    <img src={info.img} alt={info.name} />
                                 </div>
-                                <button type="submit" className="btn mb-btn">Changer image</button>
-                            </form>
-                            <form onSubmit={submitPseudo}>
-                                <div className="pro-pwd">
-                                    <input type="text" className="form-control" id="name" placeholder='Changer le pseudo'
-
-                                    />
+                                <div className="profile-name">
+                                    {info.name}
                                 </div>
-                                <button type="submit" className="btn mb-btn">Changer pseudo</button>
-                            </form>
+                           </div>
+                        </div>
+                        <div className="col-12 col-md-8 pro-right">
+                            <div className='form-wrapper'>
+                                <form onSubmit={submitImg}>
+                                    <div className="mb-4 pro-file">
+                                        <input type="file" className="form-control" id="email" aria-describedby="emailHelp" placeholder='Changer photo de profil'
+                                            required
+                                        />
+                                    </div>
+                                    <button type="submit" className="btn shadow-sm mb-btn">
+                                        <div className='icon-wrapper'>
+                                            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                                                <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                            </svg>
+                                        </div>
+                                    </button>
+                                </form>
+                                <form onSubmit={submitPseudo}>
+                                    <div className="pro-pwd">
+                                        <input type="text" className="form-control" id="name" placeholder='Changer le pseudo'
+                                            required
+                                        />
+                                    </div>
+                                    <button type="submit" className="btn shadow-m mb-btn">
+                                        <div className='icon-wrapper'>
+                                            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                                                <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                            </svg>
+                                        </div>
+                                    </button>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>

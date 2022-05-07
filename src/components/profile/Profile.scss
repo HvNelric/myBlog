@@ -1,4 +1,13 @@
 .mb-profile {
+	height: 100vh;
+	display: flex;
+	align-items: center;
+
+	.profile-wrapper {
+		width: 100%;
+        background: var(--color);
+	}
+
 	.pro-left,
 	.pro-right {
 		display: flex;
@@ -6,17 +15,22 @@
 		justify-content: center;
 	}
 
+	.pro-right {
+		justify-content: flex-start;
+	}
+
 	.left-wrapper {
-        text-align: center;
+		text-align: center;
+
 		.profile-name {
 			display: inline-block;
 			margin: O auto;
-			padding: 5px 1rem;
-			color: white;
-			background: var(--lc);
-            font-size: 1.5rem;
-            border-radius: 5px;
-            margin-top: 10px;
+			padding: 2px 1rem;
+			color: var(--dark);
+			background: var(--lcolor);
+			font-size: 1.5rem;
+			border-radius: 5px;
+			margin-top: 10px;
 		}
 	}
 
@@ -42,5 +56,26 @@
 		display: inline-block;
 		width: 70%;
 		margin-right: 10px;
+	}
+
+    .icon-wrapper {
+        margin: 0;
+    }
+}
+
+@media (min-width: 992px) {
+	.mb-profile {
+		.row {
+			justify-content: center;
+			.pro-left {
+				width: 200px;
+			}
+
+			.pro-right {
+				width: auto;
+				flex-basis: auto;
+				margin-left: 2rem;
+			}
+		}
 	}
 }
