@@ -12,35 +12,23 @@
 	--pf: "rb";
 	--rw: "rw";
 
-	//rgb(31,41,55);
-	--d-bg: #222831;
-	--n-bg: #393e46;
+	//--ddark: #495464;
 
-	--dc: #35477d;
-	--c: #6c5b7b;
-	--lc: #c06c84;
-	//--spe: #f67280;
-
-	//--dark: #495464;
 	--dgray: #bbbfca;
 	--gray: #e8e8e8;
 	--lgray: #f4f4f2;
 
-	--dgreen: #99a799;
-	--green: #adc2a9;
-	--lgreen: #d3e4cd;
+	//--ddark: #393E46;
+	// --dcolor: #ECE8D9;
+	// --color: #FAF6E9;
+	// --lcolor: #FFFDF6;
 
-	--skin: #fef5ed;
+	--ddark: #1E2022;
+	--dcolor: #52616B;
+	--color: #C9D6DF;
+	--lcolor: #F0F5F9;
 
-	--ddark: #8e806a;
-	--dark: #c3b091;
-
-	--dcolor: #e9dac1;
-	--color: #f7ecde;
-	--lcolor: #fbf8f1;
-
-	//--spe: #54bab9;
-    --spe: #79B4B7;
+	--spe: #79b4b7;
 
 	font-size: 14px;
 	color: white;
@@ -97,14 +85,17 @@ h5 {
 }
 
 .mb-btn {
-	background-color: var(--spe);
+	background-color: var(--ddark);
 	color: white;
 	transition: 0.3s ease;
 
 	&:hover {
-		background: var(--dcolor);
+		background: var(--spe);
 		transition: 0.3s ease;
-		color: var(--ddark);
+	}
+
+	.icon-wrapper {
+		margin: 0 10px;
 	}
 
 	&:focus {
@@ -118,8 +109,8 @@ h5 {
 
 .btn-disabled {
 	position: relative;
-    background: var(--gray);
-    color: white;
+	background: var(--gray);
+	color: white;
 
 	.icon-wrapper {
 		position: absolute;
@@ -149,36 +140,38 @@ h5 {
 	color: white;
 
 	&:hover {
-		color: var(--ddark);
+		color: var(--spe);
 	}
 }
 
 .animation {
-  animation: fade-in 0.3s ease-in both;
-  opacity: 0;
+	animation: fade-in 0.3s ease-in both;
+	opacity: 0;
 }
 
 @keyframes fade-in {
-  from {
-    opactiy: 0;
-  } to {
-    opacity: 1;
-  }
+	from {
+		opactiy: 0;
+	}
+	to {
+		opacity: 1;
+	}
 }
 
 // RESET BOOTSTRAP ///////////
 .form-control {
-	background: var(--skin);
-	border: 1px solid var(--color);
+	background: var(--lgray);
+	border: none; //border: 1px solid var(--dcolor);
 	color: var(--ddark);
 
 	&:focus {
 		box-shadow: none;
-        color: var(--ddark);
-		border-color: var(--lcolor);
+		color: var(--ddark);
+		//border-color: var(--lcolor);
+        border: none;;
 	}
 
-    &::placeholder {
-        color: var(--ddark);
-    }
+	&::placeholder {
+		color: var(--ddark);
+	}
 }

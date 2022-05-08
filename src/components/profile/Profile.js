@@ -77,7 +77,7 @@ const Profile = () => {
 
     return (
         <div className='container-fluid p-0 mb-profile'>
-            <div className='container-fuid p-0 profile-wrapper'>
+            <div className='container-fuid p-0 profile-wrapper shadow-lg'>
                 <div className="container mb-container">
                     <div className="row">
                         <div className="col-12 col-md-4 pro-left">
@@ -85,7 +85,7 @@ const Profile = () => {
                                 <div className="img-wrapper pro-img-wrapper shadow">
                                     <img src={info.img} alt={info.name} />
                                 </div>
-                                <div className="profile-name">
+                                <div className="profile-name shadow">
                                     {info.name}
                                 </div>
                            </div>

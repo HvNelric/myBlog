@@ -3,12 +3,17 @@
 @import "bootstrap/scss/utilities";
 
 nav {
-    background: var(--dark) ;
+    background: rgba(0,0,0,.75); //var(--ddark);
+    //backdrop-filter: blur(5px);
 
 	.nav-right {
 		position: relative;
 		display: flex;
 		align-items: center;
+
+        .user-info {
+            color: white;
+        }
 
 		.nav-user-wrapper {
 			box-shadow: $box-shadow-lg;
@@ -16,7 +21,7 @@ nav {
 			height: 30px;
 			overflow: hidden;
 			border-radius: 50%;
-			border: 1px solid var(--dgray);
+			border: 1px solid var(--dcolor);
 			margin-left: 1rem;
             cursor: pointer;
 
@@ -32,7 +37,7 @@ nav {
 			position: absolute;
 			top: 50px;
 			right: 0;
-			background: var(--dark);
+			background: var(--ddark);
 			border-radius: 5px;
 			overflow: hidden;
 
@@ -66,7 +71,7 @@ nav {
 					}
 
 					&:not(:last-child) .nav-link {
-						border-bottom: 1px solid var(--gray);
+						border-bottom: 1px solid #393838;
 					}
 				}
 			}

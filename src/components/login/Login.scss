@@ -7,7 +7,7 @@
     .login-wrapper {
         padding: 5rem 2rem;
         border-radius: 5px;
-        background: var(--dcolor);
+        background: var(--ddark);
         width: 450px;
 
         h2 {
@@ -20,8 +20,8 @@
 
             input {
                 border-radius: 5px 5px 0 0 ;
-                background: var(--lcolor);
-                border-color: var(--color);
+                background: var(--dcolor);
+                border-color: var(--dgray);
             }
         }
 
