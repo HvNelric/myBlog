@@ -115,7 +115,7 @@ const Nav = () => {
         )
 
     return (
-        <nav className="navbar navbar-expand-md fixed-top shadow">
+        <nav className="navbar navbar-expand-md fixed-top shadow-sm">
             <div className="container-fluid">
                 <NavLink className="nav-link" to="/">MyBlog</NavLink>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
