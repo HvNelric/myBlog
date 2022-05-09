@@ -1,0 +1,135 @@
+.mb-godmode {
+	.title1,
+	.title2 {
+		font-size: 10rem;
+		font-family: "rb";
+		line-height: 0.6;
+		text-align: center;
+		color: white;
+	}
+
+	.title1 {
+		margin-right: 15rem;
+        margin-top: 5rem;
+	}
+
+	.title2 {
+		margin-bottom: 4rem;
+		margin-left: 12rem;
+	}
+
+    .gm-form-wrapper {
+        padding-left: 0;
+        padding-right: 0;
+        background: var(--dcolor);
+    }
+
+	.gm-card {
+		background: white;
+		padding: 10px;
+		width: 360px;
+
+		.img-wrapper {
+			//width: 350px;
+			height: 350px;
+			overflow: hidden;
+		}
+
+		.bottom {
+			.title {
+				margin: 10px 0;
+				font-family: "rb";
+			}
+
+			.desc {
+				margin-bottom: 5px;
+				font-size: 0.9rem;
+			}
+		}
+	}
+
+	.gm-form {
+		.icon-wrapper {
+			margin: 0 20px;
+
+			svg {
+				fill: white;
+			}
+		}
+	}
+
+	.gm-admin {
+		.gm-card {
+			width: auto;
+            
+			.img-wrapper {
+				width: auto;
+                height: 300px;
+
+                .gm-icon-edit-wrapper {
+                    position: absolute;
+                    bottom: 1rem;
+                    right: 1rem;
+                    width: 50px;
+                    height: 50px;
+                    background: var(--spe);
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    svg {
+                        fill: white;
+                        width: 25px;
+                        height: 25px;
+                    }
+                }
+
+                .gm-icon-del-wrapper {
+                    position: absolute;
+                    right: 1rem;
+                    top: 1rem;
+                    width: 50px;
+                    height: 50px;
+                    background: red;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    svg {
+                        fill: white;
+                        width: 25px;
+                        height: 25px;
+                    }
+                }
+			}
+
+            .bottom {
+
+                .title {
+                    height: 20px;
+                    padding-right: 40px;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    position: relative;
+                    overflow: hidden;
+
+                    .icon-plus-wrapper {
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        margin: 0;
+                        width: 20px;
+                        height: 20px;
+
+                        svg {
+                            fill: var(--spe);
+                            stroke: var(--spe);
+                        }
+                    }
+                }
+            }
+		}
+	}
+}
